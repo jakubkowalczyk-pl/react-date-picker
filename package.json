@@ -1,0 +1,21 @@
+{
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base static/ --disableHostCheck --host 0.0.0.0"
+  },
+  "author": "Jakub Kowalczyk",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "style-loader": "^0.19.1",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

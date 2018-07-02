@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1em 0;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.navigation {
+    padding: 0 .5em;
+    cursor: pointer;
+}
+
+.month {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.cell {
+    border: 1px solid #ddd;
+    padding: .5em;
+    text-align: center;
+    transition: background .2s;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: #ff8;
+}
+
+.cellAnotherMonth {
+    color: transparent;
+    text-shadow: 0 0 4px #bbb;
+    background: #f4f4f4;
+}
+
+.cellSelected {
+    background: #ff8;
+}
+
+.dayName {
+    padding: .5em;
+    text-align: center;
+    font-size: .8em;
+    color: #888;
+}

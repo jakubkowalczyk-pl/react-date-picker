@@ -1,0 +1,26 @@
+.container {
+    padding: .5em;
+    border: 1px solid #cfcfcf;
+    position: relative;
+    display: inline-flex;
+}
+
+.label {
+    padding-right: .5em;
+    color: #888;
+    cursor: pointer;
+}
+
+.date {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calendar {
+    padding: 5px;
+    border: 1px solid #cfcfcf;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    background: #fff;
+    top: 100%;
+    position: absolute;
+}
