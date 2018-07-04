@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import * as css from './style.css';
 
 export default class Calendar extends React.PureComponent {
+    static propTypes = {
+        className: PropTypes.string,
+        date: PropTypes.instanceOf(Date),
+        onChange: PropTypes.func,
+    };
+
     constructor(props) {
         const date = props.date || new Date;
 
@@ -106,9 +112,3 @@ export default class Calendar extends React.PureComponent {
         </div>
     }
 }
-
-Calendar.propTypes = {
-    className: PropTypes.string,
-    date: PropTypes.instanceOf(Date),
-    onChange: PropTypes.func,
-};

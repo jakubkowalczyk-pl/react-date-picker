@@ -4,6 +4,16 @@ import Calendar from '../calendar';
 import * as css from './style.css';
 
 export default class DatePicker extends React.PureComponent {
+    static propTypes = {
+        label: PropTypes.string,
+        className: PropTypes.string,
+    };
+
+    static defaultProps = {
+        label: 'Date',
+        className: '',
+    };
+
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
@@ -25,16 +35,17 @@ export default class DatePicker extends React.PureComponent {
             ${this.state.date.getFullYear()}-${this.state.date.getMonth()+1}-${this.state.date.getDate()}` :
             '';
         const { active } = this.state;
-        const { label } = this.props;
+        const { label, className } = this.props;
 
-        return <div className={css.container}>
-            <span className={css.label} onClick={this.toggle}>{label}</span>
+        return <div className={`${css.container} ${className}`}>
+            <div className={css.button} onClick={this.toggle}>
+                <span className={css.label}>{label}</span>
 
-            <time dateTime={date}
-                  onClick={this.toggle}
-                  className={css.date}>
-                {date}
-            </time>
+                <time dateTime={date}
+                      className={css.date}>
+                    {date}
+                </time>
+            </div>
 
             {active && <Calendar
                 className={css.calendar}
@@ -44,7 +55,3 @@ export default class DatePicker extends React.PureComponent {
         </div>
     }
 }
-
-DatePicker.propTypes = {
-    label: PropTypes.string,
-};

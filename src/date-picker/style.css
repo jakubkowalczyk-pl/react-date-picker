@@ -1,12 +1,21 @@
 .container {
+    position: relative;
+}
+
+.button {
     padding: .5em;
     border: 1px solid #cfcfcf;
-    position: relative;
-    display: inline-flex;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+.button:hover {
+    background: #ff8;
 }
 
 .label {
-    padding-right: .5em;
+    padding-right: .25em;
     color: #888;
     cursor: pointer;
 }
@@ -19,8 +28,17 @@
 .calendar {
     padding: 5px;
     border: 1px solid #cfcfcf;
+    border-radius: 4px;
     box-shadow: 0 0 10px rgba(0,0,0,.2);
     background: #fff;
     top: 100%;
+    left: 0;
+    animation: datePickerShow .2s;
+    transform-origin: 0 0;
     position: absolute;
+}
+
+@keyframes datePickerShow {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
 }
