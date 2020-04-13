@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
-    publicPath: '/assets/',
-    path: path.resolve(__dirname, 'static', 'assets')
+    publicPath: '/',
+    path: path.resolve(__dirname, 'build')
   },
   resolve: {
     extensions: ['.js', '.jsx']

@@ -1,7 +1,7 @@
 {
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base static/ --disableHostCheck --host 0.0.0.0"
+    "start": "webpack-dev-server --content-base . --disableHostCheck --host 0.0.0.0"
   },
   "author": "Jakub Kowalczyk",
   "devDependencies": {
